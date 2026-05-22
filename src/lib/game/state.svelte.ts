@@ -6,7 +6,7 @@ import type { ModeId } from '$lib/modes';
 import { recordGame, loadStats } from '$lib/stats/local-stats';
 import type { LocalStats } from '$lib/stats/local-stats';
 import { AUTO_ADVANCE_SECONDS, createRound, defaultSettings, scoreForAnswer } from './engine';
-import type { GameRound, RoundOutcome } from './engine';
+import type { GameRound, RoundOptions, RoundOutcome } from './engine';
 
 /** Number of future rounds to peek ahead and preload artwork for. */
 const PRELOAD_AHEAD = 2;
@@ -173,12 +173,19 @@ export class GameController {
 
 	// ── Game flow ─────────────────────────────────────────────────────────────
 
+	/** Build round options from the active mode definition. */
+	private get roundOptions(): RoundOptions {
+		return {
+			regionLock: this.activeMode === 'region-lock'
+		};
+	}
+
 	startRound() {
 		if (this.playableRoster.length === 0) return;
 		this.clearTimer();
 		this.outcome = 'idle';
 		this.selectedId = null;
-		this.currentRound = createRound(this.playableRoster, this.usedIds);
+		this.currentRound = createRound(this.playableRoster, this.usedIds, this.roundOptions);
 		this.usedIds.add(this.currentRound.answer.id);
 		// Preload current round image immediately
 		preloadEntry(this.currentRound.answer);
@@ -211,7 +218,7 @@ export class GameController {
 		this.outcome = 'idle';
 		this.selectedId = null;
 		this.usedIds = new Set();
-		this.currentRound = createRound(this.playableRoster, this.usedIds);
+		this.currentRound = createRound(this.playableRoster, this.usedIds, this.roundOptions);
 		this.usedIds.add(this.currentRound.answer.id);
 		// Preload current round image immediately
 		preloadEntry(this.currentRound.answer);

@@ -31,11 +31,29 @@ export function shuffle<T>(items: T[]): T[] {
 	return [...items].sort(() => Math.random() - 0.5);
 }
 
-export function createRound(roster: PokemonEntry[], usedIds: Set<number>): GameRound {
+export type RoundOptions = {
+	/** When true, decoys are restricted to the same generation as the answer. */
+	regionLock?: boolean;
+};
+
+export function createRound(
+	roster: PokemonEntry[],
+	usedIds: Set<number>,
+	options: RoundOptions = {}
+): GameRound {
 	const available = roster.filter((e) => !usedIds.has(e.id));
 	const answerPool = available.length > 0 ? available : roster;
 	const answer = answerPool[Math.floor(Math.random() * answerPool.length)];
-	const decoys = shuffle(roster.filter((e) => e.id !== answer.id)).slice(0, 3);
+
+	// Build decoy pool — optionally restrict to same generation
+	let decoyPool = roster.filter((e) => e.id !== answer.id);
+	if (options.regionLock) {
+		const sameGen = decoyPool.filter((e) => e.generation === answer.generation);
+		// Fall back to full pool if not enough same-gen decoys
+		if (sameGen.length >= 3) decoyPool = sameGen;
+	}
+	const decoys = shuffle(decoyPool).slice(0, 3);
+
 	return { answer, choices: shuffle([answer, ...decoys]) };
 }
 
