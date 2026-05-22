@@ -3,6 +3,8 @@ import { loadGenerations } from '$lib/data/pokemon-loader';
 import { preloadEntry, preloadQueue, peekQueue } from '$lib/assets/preload';
 import { getModeDefinition } from '$lib/modes';
 import type { ModeId } from '$lib/modes';
+import { recordGame, loadStats } from '$lib/stats/local-stats';
+import type { LocalStats } from '$lib/stats/local-stats';
 import { AUTO_ADVANCE_SECONDS, createRound, defaultSettings, scoreForAnswer } from './engine';
 import type { GameRound, RoundOutcome } from './engine';
 
@@ -51,6 +53,13 @@ export class GameController {
 	score = $state(0);
 	streak = $state(0);
 	bestStreak = $state(0);
+
+	// ── In-game answer tracking ───────────────────────────────────────────────
+	totalCorrect = $state(0);
+	totalMissed = $state(0);
+
+	// ── Persisted stats ───────────────────────────────────────────────────────
+	stats = $state<LocalStats>(loadStats());
 
 	// Non-reactive private timer handle
 	private _timer: ReturnType<typeof setInterval> | null = null;
@@ -139,13 +148,27 @@ export class GameController {
 		this.resetImage();
 	}
 
-	newGame() {
+	newGame(recordPrevious = false) {
 		if (this.playableRoster.length === 0) return;
 		this.clearTimer();
+
+		// Persist stats for the game that just ended
+		if (recordPrevious && this.score > 0) {
+			this.stats = recordGame(
+				this.activeMode,
+				this.score,
+				this.bestStreak,
+				this.totalCorrect,
+				this.totalMissed
+			);
+		}
+
 		this.roundNumber = 1;
 		this.score = 0;
 		this.streak = 0;
 		this.bestStreak = 0;
+		this.totalCorrect = 0;
+		this.totalMissed = 0;
 		this.outcome = 'idle';
 		this.selectedId = null;
 		this.usedIds = new Set();
@@ -164,14 +187,19 @@ export class GameController {
 		this.score += scoreForAnswer(correct, this.streak);
 		this.streak = correct ? this.streak + 1 : 0;
 		this.bestStreak = Math.max(this.bestStreak, this.streak);
-		if (correct) this.scheduleAutoAdvance();
+		if (correct) {
+			this.totalCorrect += 1;
+			this.scheduleAutoAdvance();
+		} else {
+			this.totalMissed += 1;
+		}
 	}
 
 	nextRound() {
 		if (this.outcome === 'idle') return;
 		this.clearTimer();
 		if (this.isLastRound) {
-			this.newGame();
+			this.newGame(true); // persist stats for the completed game
 			return;
 		}
 		this.roundNumber += 1;

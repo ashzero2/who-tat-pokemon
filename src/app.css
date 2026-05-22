@@ -531,6 +531,39 @@ h2 {
   background: rgba(33, 49, 34, 0.16);
 }
 
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+.stats-strip div {
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(28, 5, 11, 0.3);
+  text-align: center;
+}
+
+.stats-strip span {
+  display: block;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.66rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.stats-strip strong {
+  display: block;
+  margin-top: 3px;
+  color: #fff7d6;
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
 .answers {
   display: grid;
   grid-template-columns: 1fr 1fr;

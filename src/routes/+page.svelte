@@ -200,6 +200,24 @@
           </dl>
         </div>
 
+        <!-- Compact stats strip -->
+        {#if game.stats.overall.gamesPlayed > 0}
+          {@const ov = game.stats.overall}
+          <div class="stats-strip" aria-label="Session stats">
+            <div><span>Played</span><strong>{ov.gamesPlayed}</strong></div>
+            <div><span>Best score</span><strong>{ov.highScore}</strong></div>
+            <div><span>Best chain</span><strong>{ov.bestStreak}</strong></div>
+            <div>
+              <span>Accuracy</span>
+              <strong>
+                {ov.totalCorrect + ov.totalMissed > 0
+                  ? Math.round((ov.totalCorrect / (ov.totalCorrect + ov.totalMissed)) * 100) + '%'
+                  : '—'}
+              </strong>
+            </div>
+          </div>
+        {/if}
+
         {#if !game.loading && !game.loadError && game.currentRound}
           <div class="answers" aria-label="Answer choices">
             {#each game.currentRound.choices as choice, index}
