@@ -5,6 +5,7 @@
   import { getBestArtwork } from '$lib/data/pokemon-loader';
   import { GameController, AUTO_ADVANCE_SECONDS, defaultSettings } from '$lib/game';
   import { MODE_DEFINITIONS } from '$lib/modes';
+  import { todayLabel } from '$lib/daily';
 
   const GENERATION_FILTERS: GenerationId[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   const UNLOCKED_GENERATIONS: GenerationId[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -155,6 +156,18 @@
               {:else if isPreview}<span class="badge">Preview</span>{/if}
             </button>
           {/each}
+
+          <!-- Daily Challenge stub -->
+          <button
+            class="mode-btn locked daily-btn"
+            type="button"
+            disabled
+            aria-label="Daily Challenge — coming soon"
+            title="One shared puzzle per day — leaderboards coming soon"
+          >
+            Daily
+            <span class="badge">{todayLabel()}</span>
+          </button>
         </div>
 
         <div class="mode-strip" aria-label="Generation filter">
