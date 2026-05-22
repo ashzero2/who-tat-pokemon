@@ -1,7 +1,11 @@
 import type { GenerationId, PokemonEntry } from '$lib/data/types';
 import { loadGenerations } from '$lib/data/pokemon-loader';
+import { preloadEntry, preloadQueue, peekQueue } from '$lib/assets/preload';
 import { AUTO_ADVANCE_SECONDS, createRound, defaultSettings, scoreForAnswer } from './engine';
 import type { GameRound, RoundOutcome } from './engine';
+
+/** Number of future rounds to peek ahead and preload artwork for. */
+const PRELOAD_AHEAD = 2;
 
 export class GameController {
 	// ── Roster / loading ──────────────────────────────────────────────────────
@@ -80,6 +84,14 @@ export class GameController {
 		}, 1000);
 	}
 
+	// ── Preload queue ─────────────────────────────────────────────────────────
+
+	/** Peek ahead and preload the next N likely artwork URLs. */
+	preloadAhead() {
+		const queue = peekQueue(this.playableRoster, this.usedIds, PRELOAD_AHEAD);
+		preloadQueue(queue, PRELOAD_AHEAD);
+	}
+
 	// ── Image ─────────────────────────────────────────────────────────────────
 
 	resetImage() {
@@ -87,6 +99,13 @@ export class GameController {
 		requestAnimationFrame(() => {
 			this.imageReady = true;
 		});
+	}
+
+	/** Called by the UI when the current round image finishes loading. */
+	onImageLoaded() {
+		this.imageReady = true;
+		// Once the current image is shown, warm the cache for upcoming rounds
+		this.preloadAhead();
 	}
 
 	// ── Game flow ─────────────────────────────────────────────────────────────
@@ -98,6 +117,8 @@ export class GameController {
 		this.selectedId = null;
 		this.currentRound = createRound(this.playableRoster, this.usedIds);
 		this.usedIds.add(this.currentRound.answer.id);
+		// Preload current round image immediately
+		preloadEntry(this.currentRound.answer);
 		this.resetImage();
 	}
 
@@ -113,6 +134,8 @@ export class GameController {
 		this.usedIds = new Set();
 		this.currentRound = createRound(this.playableRoster, this.usedIds);
 		this.usedIds.add(this.currentRound.answer.id);
+		// Preload current round image immediately
+		preloadEntry(this.currentRound.answer);
 		this.resetImage();
 	}
 

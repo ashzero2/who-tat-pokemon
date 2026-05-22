@@ -103,12 +103,17 @@
             <img
               src={getBestArtwork(game.answer)}
               alt={game.isRevealed ? game.answer.displayName : 'Mystery Pokemon silhouette'}
-              onload={() => (game.imageReady = true)}
+              onload={() => game.onImageLoaded()}
               onerror={(e) => {
                 if (!game.answer) return;
                 const img = e.currentTarget as HTMLImageElement;
                 const fallback = game.answer.artwork.sprite ?? game.answer.artwork.fallback ?? '';
                 if (img.src !== fallback) img.src = fallback;
+                else {
+                  // Both URLs failed — show broken-art placeholder
+                  img.alt = game.isRevealed ? game.answer.displayName : '???';
+                  img.removeAttribute('src');
+                }
               }}
             />
           {/if}
