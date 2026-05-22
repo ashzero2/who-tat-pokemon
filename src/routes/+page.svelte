@@ -159,16 +159,19 @@
             </button>
           {/each}
 
-          <!-- Daily Challenge stub -->
+          <!-- Daily Challenge -->
           <button
-            class="mode-btn locked daily-btn"
+            class="mode-btn daily-btn"
+            class:active={game.isDaily}
+            class:locked={game.isDailyPlayed && !game.isDaily}
             type="button"
-            disabled
-            aria-label="Daily Challenge — coming soon"
-            title="One shared puzzle per day — leaderboards coming soon"
+            disabled={game.isDailyPlayed && !game.isDaily}
+            aria-label={game.isDailyPlayed ? 'Daily Challenge — already completed today' : `Daily Challenge — ${todayLabel()}`}
+            title={game.isDailyPlayed ? 'Come back tomorrow for a new challenge!' : 'One shared puzzle per day — same Pokémon for everyone'}
+            onclick={() => game.startDaily()}
           >
             Daily
-            <span class="badge">{todayLabel()}</span>
+            <span class="badge">{game.isDailyPlayed ? '✓' : todayLabel()}</span>
           </button>
         </div>
 

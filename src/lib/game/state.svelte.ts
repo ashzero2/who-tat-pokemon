@@ -5,8 +5,11 @@ import { getModeDefinition } from '$lib/modes';
 import type { ModeId } from '$lib/modes';
 import { recordGame, loadStats } from '$lib/stats/local-stats';
 import type { LocalStats } from '$lib/stats/local-stats';
-import { AUTO_ADVANCE_SECONDS, createRound, defaultSettings, scoreForAnswer } from './engine';
+import { dailySeedForDate, dailyRoundIds, todayLabel } from '$lib/daily';
+import { AUTO_ADVANCE_SECONDS, createRound, defaultSettings, scoreForAnswer, shuffle } from './engine';
 import type { GameRound, RoundOptions, RoundOutcome } from './engine';
+
+const DAILY_PLAYED_KEY = 'pokedex-daily-played';
 
 /** Number of future rounds to peek ahead and preload artwork for. */
 const PRELOAD_AHEAD = 2;
@@ -19,6 +22,8 @@ export class GameController {
 
 	// ── Mode ─────────────────────────────────────────────────────────────────
 	activeMode = $state<ModeId>('classic');
+	isDaily = $state(false);
+	dailyCompleted = $state(false);
 
 	get mode() {
 		return getModeDefinition(this.activeMode);
@@ -27,6 +32,8 @@ export class GameController {
 	selectMode(id: ModeId) {
 		const def = getModeDefinition(id);
 		if (def.status !== 'available') return; // locked / preview modes cannot start
+		this.isDaily = false;
+		this.dailyCompleted = false;
 		this.activeMode = id;
 		this.roundLimit = def.rounds;
 		this.newGame();
@@ -57,6 +64,10 @@ export class GameController {
 	// ── In-game answer tracking ───────────────────────────────────────────────
 	totalCorrect = $state(0);
 	totalMissed = $state(0);
+
+	// ── Daily challenge queue ─────────────────────────────────────────────────
+	private _dailyQueue: PokemonEntry[] = [];
+	private _dailyIndex = 0;
 
 	// ── Persisted stats ───────────────────────────────────────────────────────
 	stats = $state<LocalStats>(loadStats());
@@ -250,6 +261,17 @@ export class GameController {
 	nextRound() {
 		if (this.outcome === 'idle') return;
 		this.clearTimer();
+
+		// Daily challenge uses its own deterministic round flow
+		if (this.isDaily) {
+			if (this.isLastRound) {
+				this.nextDailyRound(); // will mark as complete
+				return;
+			}
+			this.nextDailyRound();
+			return;
+		}
+
 		if (this.isLastRound) {
 			this.newGame(true); // persist stats for the completed game
 			return;
@@ -278,6 +300,124 @@ export class GameController {
 		} finally {
 			this.loading = false;
 		}
+	}
+
+	// ── Daily challenge ───────────────────────────────────────────────────────
+
+	/** Check if today's daily challenge has already been played. */
+	get isDailyPlayed(): boolean {
+		try {
+			const played = localStorage.getItem(DAILY_PLAYED_KEY);
+			return played === todayLabel();
+		} catch {
+			return false;
+		}
+	}
+
+	/** Mark today's daily challenge as completed. */
+	private markDailyPlayed() {
+		try {
+			localStorage.setItem(DAILY_PLAYED_KEY, todayLabel());
+		} catch {
+			// Private browsing or quota — silently ignore
+		}
+	}
+
+	/** Create a daily round from the pre-built deterministic queue. */
+	private createDailyRound(): GameRound {
+		const answer = this._dailyQueue[this._dailyIndex];
+		const decoyPool = this.playableRoster.filter((e) => e.id !== answer.id);
+		const decoys = shuffle(decoyPool).slice(0, 3);
+		return { answer, choices: shuffle([answer, ...decoys]) };
+	}
+
+	/** Start the daily challenge using today's seed. */
+	async startDaily() {
+		if (this.isDailyPlayed) {
+			this.dailyCompleted = true;
+			return;
+		}
+
+		this.isDaily = true;
+		this.dailyCompleted = false;
+		this.activeMode = 'classic'; // Daily uses Classic rules
+		this.roundLimit = 10;
+
+		// Ensure we have a full roster loaded (all generations for variety)
+		const allGens: GenerationId[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+		this.loading = true;
+		this.loadError = null;
+		try {
+			this.roster = await loadGenerations(allGens);
+			this.selectedGenerations = [...allGens];
+		} catch (err) {
+			this.loadError = err instanceof Error ? err.message : 'Failed to load Pokémon data.';
+			this.loading = false;
+			return;
+		}
+		this.loading = false;
+
+		// Generate deterministic round IDs from today's seed
+		const seed = dailySeedForDate();
+		const guessable = this.playableRoster;
+		const ids = dailyRoundIds(guessable, seed, this.roundLimit);
+		const idLookup = new Map(guessable.map((e) => [e.id, e]));
+		this._dailyQueue = ids.map((id) => idLookup.get(id)!).filter(Boolean);
+		this._dailyIndex = 0;
+
+		// Fallback if not enough entries
+		if (this._dailyQueue.length === 0) {
+			this.loadError = 'Not enough Pokémon for daily challenge.';
+			return;
+		}
+		this.roundLimit = Math.min(this.roundLimit, this._dailyQueue.length);
+
+		// Reset game state
+		this.clearTimer();
+		this.roundNumber = 1;
+		this.score = 0;
+		this.streak = 0;
+		this.bestStreak = 0;
+		this.totalCorrect = 0;
+		this.totalMissed = 0;
+		this.outcome = 'idle';
+		this.selectedId = null;
+		this.usedIds = new Set();
+
+		// Create first daily round
+		this.currentRound = this.createDailyRound();
+		this.usedIds.add(this.currentRound.answer.id);
+		preloadEntry(this.currentRound.answer);
+		this.resetImage();
+	}
+
+	/** Start the next daily round or finish. */
+	private nextDailyRound() {
+		this._dailyIndex += 1;
+		if (this._dailyIndex >= this._dailyQueue.length || this.roundNumber >= this.roundLimit) {
+			// Daily challenge complete
+			this.markDailyPlayed();
+			this.dailyCompleted = true;
+			this.stats = recordGame(
+				this.activeMode,
+				this.score,
+				this.bestStreak,
+				this.totalCorrect,
+				this.totalMissed
+			);
+			// Reset to classic mode after daily
+			this.isDaily = false;
+			this.newGame();
+			return;
+		}
+		this.roundNumber += 1;
+		this.clearTimer();
+		this.outcome = 'idle';
+		this.selectedId = null;
+		this.currentRound = this.createDailyRound();
+		this.usedIds.add(this.currentRound.answer.id);
+		preloadEntry(this.currentRound.answer);
+		this.resetImage();
 	}
 
 	choiceClass(choice: PokemonEntry): string {
