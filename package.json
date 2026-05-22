@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "generate:pokemon": "node scripts/generate-pokemon-data.mjs"
+    "generate:pokemon": "node scripts/generate-pokemon-data.mjs",
+    "validate:pokemon": "node scripts/validate-pokemon-data.mjs"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^3.3.1",
