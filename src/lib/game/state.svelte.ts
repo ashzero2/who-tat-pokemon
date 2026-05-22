@@ -1,6 +1,7 @@
 import type { GenerationId, PokemonEntry } from '$lib/data/types';
 import { loadGenerations } from '$lib/data/pokemon-loader';
 import { preloadEntry, preloadQueue, peekQueue } from '$lib/assets/preload';
+import { playCry } from '$lib/assets/cry';
 import { getModeDefinition } from '$lib/modes';
 import type { ModeId } from '$lib/modes';
 import { recordGame, loadStats } from '$lib/stats/local-stats';
@@ -248,6 +249,8 @@ export class GameController {
 		this.bestStreak = Math.max(this.bestStreak, this.streak);
 		if (correct) {
 			this.totalCorrect += 1;
+			// Play the Pokémon's cry on correct answer
+			playCry(this.answer.pokemonApiId);
 			this.schedulePostAnswerTimer();
 		} else {
 			this.totalMissed += 1;
