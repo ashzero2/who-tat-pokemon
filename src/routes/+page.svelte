@@ -11,6 +11,7 @@
   const UNLOCKED_GENERATIONS: GenerationId[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   const game = new GameController();
+  let settingsOpen = $state(false);
 
   let generationLabel = $derived(
     game.answer
@@ -44,26 +45,41 @@
 <main class="pokedex-room">
   <section class="console" aria-labelledby="game-title">
     <div class="console-lid">
-      <div class="lens-cluster" aria-hidden="true">
-        <span class="lens main"></span>
-        <span class="lens red"></span>
-        <span class="lens amber"></span>
-        <span class="lens green"></span>
+      <div class="lid-left">
+        <div class="lens-cluster" aria-hidden="true">
+          <span class="lens main"></span>
+          <span class="lens red"></span>
+          <span class="lens amber"></span>
+          <span class="lens green"></span>
+        </div>
+        <div class="title-block">
+          <h1 id="game-title">Who's That Pokemon?</h1>
+        </div>
       </div>
 
-      <div class="title-block">
-        <p>Oak Lab uplink</p>
-        <h1 id="game-title">Who's That Pokemon?</h1>
+      <div class="lid-actions">
+        <button
+          class="icon-button settings-toggle"
+          type="button"
+          aria-label="Game settings"
+          title="Mode & generation settings"
+          onclick={() => settingsOpen = !settingsOpen}
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
+        </button>
+        <button
+          class="icon-button reset-button"
+          type="button"
+          aria-label="Start a new game"
+          title="Reset game"
+          onclick={() => game.newGame()}
+        >
+          ↻
+        </button>
       </div>
-
-      <button
-        class="reset-button"
-        type="button"
-        aria-label="Start a new game"
-        onclick={() => game.newGame()}
-      >
-        RESET
-      </button>
     </div>
 
     <div class="console-body">
@@ -136,105 +152,23 @@
       </section>
 
       <section class="right-deck" aria-label="Game controls">
-        <!-- Mode selector -->
-        <div class="mode-selector" aria-label="Game mode">
-          {#each MODE_DEFINITIONS as modeDef}
-            {@const isActive = game.activeMode === modeDef.id}
-            {@const isLocked = modeDef.status === 'locked'}
-            {@const isPreview = modeDef.status === 'preview'}
-            <button
-              class="mode-btn"
-              class:active={isActive}
-              class:locked={isLocked}
-              class:preview={isPreview}
-              type="button"
-              disabled={isLocked}
-              aria-label={`${modeDef.label}${isLocked ? ' — coming soon' : isPreview ? ' — preview' : ''}`}
-              title={isLocked ? 'Coming soon' : isPreview ? `${modeDef.label} (preview)` : modeDef.description}
-              onclick={() => game.selectMode(modeDef.id)}
-            >
-              {modeDef.label}
-              {#if isLocked}<span class="badge">Soon</span>
-              {:else if isPreview}<span class="badge">Preview</span>{/if}
-            </button>
-          {/each}
-
-          <!-- Daily Challenge -->
-          <button
-            class="mode-btn daily-btn"
-            class:active={game.isDaily}
-            class:locked={game.isDailyPlayed && !game.isDaily}
-            type="button"
-            disabled={game.isDailyPlayed && !game.isDaily}
-            aria-label={game.isDailyPlayed ? 'Daily Challenge — already completed today' : `Daily Challenge — ${todayLabel()}`}
-            title={game.isDailyPlayed ? 'Come back tomorrow for a new challenge!' : 'One shared puzzle per day — same Pokémon for everyone'}
-            onclick={() => game.startDaily()}
-          >
-            Daily
-            <span class="badge">{game.isDailyPlayed ? '✓' : todayLabel()}</span>
-          </button>
-        </div>
-
-        <div class="mode-strip" aria-label="Generation filter">
-          {#each GENERATION_FILTERS as id}
-            {@const locked = !UNLOCKED_GENERATIONS.includes(id)}
-            <button
-              class:active={game.selectedGenerations.includes(id)}
-              class:locked
-              type="button"
-              aria-label={`Generation ${id}${locked ? ' locked for future expansion' : ''}`}
-              onclick={() => game.toggleGeneration(id, UNLOCKED_GENERATIONS)}
-              title={locked ? 'Coming soon' : `Generation ${id} roster`}
-            >
-              {id}
-            </button>
-          {/each}
-        </div>
-
-        <div class="dex-readout">
-          <p>Dex readout</p>
-          <h2>{game.isRevealed && game.answer ? game.answer.displayName : 'Unknown'}</h2>
-          <dl>
-            <div>
-              <dt>Region</dt>
-              <dd>{game.isRevealed || game.mode.hints.showRegion ? generationLabel : 'Hidden'}</dd>
-            </div>
-            <div>
-              <dt>Type</dt>
-              <dd>
-                {#if (game.isRevealed || game.mode.hints.showType) && game.answer}
-                  {#each game.answer.types as type}
-                    <span class={`type ${type}`}>{type}</span>
-                  {/each}
-                {:else}
-                  <span class="type hidden">???</span>
-                {/if}
-              </dd>
-            </div>
-            <div>
-              <dt>Best chain</dt>
-              <dd>{game.bestStreak}</dd>
-            </div>
-          </dl>
-        </div>
-
-        <!-- Compact stats strip -->
-        {#if game.stats.overall.gamesPlayed > 0}
-          {@const ov = game.stats.overall}
-          <div class="stats-strip" aria-label="Session stats">
-            <div><span>Played</span><strong>{ov.gamesPlayed}</strong></div>
-            <div><span>Best score</span><strong>{ov.highScore}</strong></div>
-            <div><span>Best chain</span><strong>{ov.bestStreak}</strong></div>
-            <div>
-              <span>Accuracy</span>
-              <strong>
-                {ov.totalCorrect + ov.totalMissed > 0
-                  ? Math.round((ov.totalCorrect / (ov.totalCorrect + ov.totalMissed)) * 100) + '%'
-                  : '—'}
-              </strong>
-            </div>
+        <!-- Compact info bar: mode label + pokemon name + type -->
+        <div class="info-bar">
+          <span class="info-mode">{game.isDaily ? '📅 Daily' : game.mode.label}</span>
+          <h2 class="info-name">{game.isRevealed && game.answer ? game.answer.displayName : '???'}</h2>
+          <div class="info-types">
+            {#if (game.isRevealed || game.mode.hints.showType) && game.answer}
+              {#each game.answer.types as type}
+                <span class={`type ${type}`}>{type}</span>
+              {/each}
+            {:else}
+              <span class="type hidden">???</span>
+            {/if}
           </div>
-        {/if}
+          {#if game.isRevealed || game.mode.hints.showRegion}
+            <span class="info-region">{generationLabel}</span>
+          {/if}
+        </div>
 
         {#if !game.loading && !game.loadError && game.currentRound}
           <div class="answers" aria-label="Answer choices">
@@ -292,4 +226,87 @@
       </section>
     </div>
   </section>
+
+  <!-- Settings Modal -->
+  {#if settingsOpen}
+    <div class="modal-backdrop" onclick={() => settingsOpen = false} role="presentation"></div>
+    <dialog class="settings-modal" open aria-label="Game settings">
+      <div class="modal-header">
+        <h2>Settings</h2>
+        <button class="icon-button" type="button" aria-label="Close settings" onclick={() => settingsOpen = false}>✕</button>
+      </div>
+
+      <div class="modal-section">
+        <h3>Game Mode</h3>
+        <div class="mode-selector" aria-label="Game mode">
+          {#each MODE_DEFINITIONS as modeDef}
+            {@const isActive = game.activeMode === modeDef.id && !game.isDaily}
+            <button
+              class="mode-btn"
+              class:active={isActive}
+              type="button"
+              title={modeDef.description}
+              onclick={() => { game.selectMode(modeDef.id); settingsOpen = false; }}
+            >
+              {modeDef.label}
+              <span class="mode-mult">{modeDef.scoringMultiplier}×</span>
+            </button>
+          {/each}
+
+          <!-- Daily Challenge -->
+          <button
+            class="mode-btn daily-btn"
+            class:active={game.isDaily}
+            class:locked={game.isDailyPlayed && !game.isDaily}
+            type="button"
+            disabled={game.isDailyPlayed && !game.isDaily}
+            title={game.isDailyPlayed ? 'Come back tomorrow!' : 'Same puzzle for everyone today'}
+            onclick={() => { game.startDaily(); settingsOpen = false; }}
+          >
+            📅 Daily
+            <span class="badge">{game.isDailyPlayed ? '✓ Done' : todayLabel()}</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <h3>Generations</h3>
+        <div class="mode-strip" aria-label="Generation filter">
+          {#each GENERATION_FILTERS as id}
+            {@const locked = !UNLOCKED_GENERATIONS.includes(id)}
+            <button
+              class:active={game.selectedGenerations.includes(id)}
+              class:locked
+              type="button"
+              onclick={() => game.toggleGeneration(id, UNLOCKED_GENERATIONS)}
+              title={`Generation ${id}`}
+            >
+              Gen {id}
+            </button>
+          {/each}
+        </div>
+      </div>
+
+      <!-- Stats in modal -->
+      {#if game.stats.overall.gamesPlayed > 0}
+        {@const ov = game.stats.overall}
+        <div class="modal-section">
+          <h3>Stats</h3>
+          <div class="stats-strip">
+            <div><span>Played</span><strong>{ov.gamesPlayed}</strong></div>
+            <div><span>Best score</span><strong>{ov.highScore}</strong></div>
+            <div><span>Best chain</span><strong>{ov.bestStreak}</strong></div>
+            <div>
+              <span>Accuracy</span>
+              <strong>
+                {ov.totalCorrect + ov.totalMissed > 0
+                  ? Math.round((ov.totalCorrect / (ov.totalCorrect + ov.totalMissed)) * 100) + '%'
+                  : '—'}
+              </strong>
+            </div>
+          </div>
+        </div>
+      {/if}
+    </dialog>
+  {/if}
 </main>
