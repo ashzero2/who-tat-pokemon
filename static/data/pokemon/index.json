@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-22T11:07:02.756Z",
+  "totalEntries": 1350,
+  "guessableEntries": 1342,
+  "generations": [
+    {
+      "id": 1,
+      "label": "Kanto",
+      "range": [
+        1,
+        151
+      ],
+      "chunk": "gen-1.json",
+      "entries": 238,
+      "guessableEntries": 238
+    },
+    {
+      "id": 2,
+      "label": "Johto",
+      "range": [
+        152,
+        251
+      ],
+      "chunk": "gen-2.json",
+      "entries": 115,
+      "guessableEntries": 115
+    },
+    {
+      "id": 3,
+      "label": "Hoenn",
+      "range": [
+        252,
+        386
+      ],
+      "chunk": "gen-3.json",
+      "entries": 167,
+      "guessableEntries": 167
+    },
+    {
+      "id": 4,
+      "label": "Sinnoh",
+      "range": [
+        387,
+        493
+      ],
+      "chunk": "gen-4.json",
+      "entries": 129,
+      "guessableEntries": 129
+    },
+    {
+      "id": 5,
+      "label": "Unova",
+      "range": [
+        494,
+        649
+      ],
+      "chunk": "gen-5.json",
+      "entries": 185,
+      "guessableEntries": 185
+    },
+    {
+      "id": 6,
+      "label": "Kalos",
+      "range": [
+        650,
+        721
+      ],
+      "chunk": "gen-6.json",
+      "entries": 103,
+      "guessableEntries": 103
+    },
+    {
+      "id": 7,
+      "label": "Alola",
+      "range": [
+        722,
+        809
+      ],
+      "chunk": "gen-7.json",
+      "entries": 131,
+      "guessableEntries": 131
+    },
+    {
+      "id": 8,
+      "label": "Galar",
+      "range": [
+        810,
+        905
+      ],
+      "chunk": "gen-8.json",
+      "entries": 133,
+      "guessableEntries": 133
+    },
+    {
+      "id": 9,
+      "label": "Paldea",
+      "range": [
+        906,
+        1025
+      ],
+      "chunk": "gen-9.json",
+      "entries": 149,
+      "guessableEntries": 141
+    }
+  ]
+}

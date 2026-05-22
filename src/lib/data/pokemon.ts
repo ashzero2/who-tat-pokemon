@@ -1,16 +1,12 @@
-export type GenerationId = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
+import type { Generation, GenerationId, PokemonType } from './types';
+
+export type { GenerationId } from './types';
 
 export type PokemonSummary = {
   id: number;
   name: string;
   generation: GenerationId;
-  types: string[];
-};
-
-export type Generation = {
-  id: GenerationId;
-  label: string;
-  range: [number, number];
+  types: PokemonType[];
 };
 
 export const generations: Generation[] = [

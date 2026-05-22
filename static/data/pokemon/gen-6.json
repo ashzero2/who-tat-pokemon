@@ -1,0 +1,2586 @@
+{
+  "schemaVersion": 1,
+  "generation": {
+    "id": 6,
+    "label": "Kalos",
+    "range": [
+      650,
+      721
+    ]
+  },
+  "entries": [
+    {
+      "id": 650,
+      "speciesId": 650,
+      "pokemonApiId": 650,
+      "name": "chespin",
+      "displayName": "Chespin",
+      "generation": 6,
+      "types": [
+        "grass"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "chespin"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/650.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/650.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/650.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/650.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 651,
+      "speciesId": 651,
+      "pokemonApiId": 651,
+      "name": "quilladin",
+      "displayName": "Quilladin",
+      "generation": 6,
+      "types": [
+        "grass"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "quilladin"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/651.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/651.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/651.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/651.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 652,
+      "speciesId": 652,
+      "pokemonApiId": 652,
+      "name": "chesnaught",
+      "displayName": "Chesnaught",
+      "generation": 6,
+      "types": [
+        "grass",
+        "fighting"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "chesnaught"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/652.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/652.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/652.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/652.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 10292,
+      "speciesId": 652,
+      "pokemonApiId": 10292,
+      "name": "chesnaught-mega",
+      "displayName": "Chesnaught (Mega)",
+      "generation": 6,
+      "types": [
+        "grass",
+        "fighting"
+      ],
+      "isDefault": false,
+      "formName": "Mega",
+      "aliases": [
+        "chesnaught-mega",
+        "chesnaught",
+        "chesnaught (mega)",
+        "mega",
+        "chesnaught mega"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10292.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10292.png",
+        "sprite": null,
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 653,
+      "speciesId": 653,
+      "pokemonApiId": 653,
+      "name": "fennekin",
+      "displayName": "Fennekin",
+      "generation": 6,
+      "types": [
+        "fire"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "fennekin"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/653.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/653.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/653.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/653.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 654,
+      "speciesId": 654,
+      "pokemonApiId": 654,
+      "name": "braixen",
+      "displayName": "Braixen",
+      "generation": 6,
+      "types": [
+        "fire"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "braixen"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/654.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/654.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/654.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/654.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 655,
+      "speciesId": 655,
+      "pokemonApiId": 655,
+      "name": "delphox",
+      "displayName": "Delphox",
+      "generation": 6,
+      "types": [
+        "fire",
+        "psychic"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "delphox"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/655.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/655.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/655.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/655.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 10293,
+      "speciesId": 655,
+      "pokemonApiId": 10293,
+      "name": "delphox-mega",
+      "displayName": "Delphox (Mega)",
+      "generation": 6,
+      "types": [
+        "fire",
+        "psychic"
+      ],
+      "isDefault": false,
+      "formName": "Mega",
+      "aliases": [
+        "delphox-mega",
+        "delphox",
+        "delphox (mega)",
+        "mega",
+        "delphox mega"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10293.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10293.png",
+        "sprite": null,
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 656,
+      "speciesId": 656,
+      "pokemonApiId": 656,
+      "name": "froakie",
+      "displayName": "Froakie",
+      "generation": 6,
+      "types": [
+        "water"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "froakie"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/656.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/656.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/656.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/656.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 657,
+      "speciesId": 657,
+      "pokemonApiId": 657,
+      "name": "frogadier",
+      "displayName": "Frogadier",
+      "generation": 6,
+      "types": [
+        "water"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "frogadier"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/657.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/657.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/657.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/657.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 658,
+      "speciesId": 658,
+      "pokemonApiId": 658,
+      "name": "greninja",
+      "displayName": "Greninja",
+      "generation": 6,
+      "types": [
+        "water",
+        "dark"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "greninja"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/658.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/658.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/658.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/658.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 10116,
+      "speciesId": 658,
+      "pokemonApiId": 10116,
+      "name": "greninja-battle-bond",
+      "displayName": "Greninja (Battle Bond)",
+      "generation": 6,
+      "types": [
+        "water",
+        "dark"
+      ],
+      "isDefault": false,
+      "formName": "Battle Bond",
+      "aliases": [
+        "greninja-battle-bond",
+        "greninja",
+        "greninja (battle bond)",
+        "battle bond",
+        "greninja battle bond"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10116.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10116.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10116.png",
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 10117,
+      "speciesId": 658,
+      "pokemonApiId": 10117,
+      "name": "greninja-ash",
+      "displayName": "Greninja (Ash)",
+      "generation": 6,
+      "types": [
+        "water",
+        "dark"
+      ],
+      "isDefault": false,
+      "formName": "Ash",
+      "aliases": [
+        "greninja-ash",
+        "greninja",
+        "greninja (ash)",
+        "ash",
+        "greninja ash"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10117.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10117.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10117.png",
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 10294,
+      "speciesId": 658,
+      "pokemonApiId": 10294,
+      "name": "greninja-mega",
+      "displayName": "Greninja (Mega)",
+      "generation": 6,
+      "types": [
+        "water",
+        "dark"
+      ],
+      "isDefault": false,
+      "formName": "Mega",
+      "aliases": [
+        "greninja-mega",
+        "greninja",
+        "greninja (mega)",
+        "mega",
+        "greninja mega"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10294.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10294.png",
+        "sprite": null,
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 659,
+      "speciesId": 659,
+      "pokemonApiId": 659,
+      "name": "bunnelby",
+      "displayName": "Bunnelby",
+      "generation": 6,
+      "types": [
+        "normal"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "bunnelby"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/659.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/659.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/659.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/659.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 660,
+      "speciesId": 660,
+      "pokemonApiId": 660,
+      "name": "diggersby",
+      "displayName": "Diggersby",
+      "generation": 6,
+      "types": [
+        "normal",
+        "ground"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "diggersby"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/660.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/660.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/660.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/660.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 661,
+      "speciesId": 661,
+      "pokemonApiId": 661,
+      "name": "fletchling",
+      "displayName": "Fletchling",
+      "generation": 6,
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "fletchling"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/661.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/661.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/661.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/661.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 662,
+      "speciesId": 662,
+      "pokemonApiId": 662,
+      "name": "fletchinder",
+      "displayName": "Fletchinder",
+      "generation": 6,
+      "types": [
+        "fire",
+        "flying"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "fletchinder"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/662.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/662.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/662.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/662.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 663,
+      "speciesId": 663,
+      "pokemonApiId": 663,
+      "name": "talonflame",
+      "displayName": "Talonflame",
+      "generation": 6,
+      "types": [
+        "fire",
+        "flying"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "talonflame"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/663.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/663.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/663.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/663.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 664,
+      "speciesId": 664,
+      "pokemonApiId": 664,
+      "name": "scatterbug",
+      "displayName": "Scatterbug",
+      "generation": 6,
+      "types": [
+        "bug"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "scatterbug"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/664.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/664.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/664.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/664.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 665,
+      "speciesId": 665,
+      "pokemonApiId": 665,
+      "name": "spewpa",
+      "displayName": "Spewpa",
+      "generation": 6,
+      "types": [
+        "bug"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "spewpa"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/665.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/665.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/665.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/665.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 666,
+      "speciesId": 666,
+      "pokemonApiId": 666,
+      "name": "vivillon",
+      "displayName": "Vivillon",
+      "generation": 6,
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "vivillon"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/666.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/666.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/666.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/666.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 667,
+      "speciesId": 667,
+      "pokemonApiId": 667,
+      "name": "litleo",
+      "displayName": "Litleo",
+      "generation": 6,
+      "types": [
+        "fire",
+        "normal"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "litleo"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/667.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/667.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/667.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/667.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 668,
+      "speciesId": 668,
+      "pokemonApiId": 668,
+      "name": "pyroar-male",
+      "displayName": "Pyroar",
+      "generation": 6,
+      "types": [
+        "fire",
+        "normal"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "pyroar-male",
+        "pyroar",
+        "pyroar male"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/668.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/668.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/668.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/668.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 10295,
+      "speciesId": 668,
+      "pokemonApiId": 10295,
+      "name": "pyroar-mega",
+      "displayName": "Pyroar (Mega)",
+      "generation": 6,
+      "types": [
+        "fire",
+        "normal"
+      ],
+      "isDefault": false,
+      "formName": "Mega",
+      "aliases": [
+        "pyroar-mega",
+        "pyroar",
+        "pyroar (mega)",
+        "mega",
+        "pyroar mega"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10295.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10295.png",
+        "sprite": null,
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 669,
+      "speciesId": 669,
+      "pokemonApiId": 669,
+      "name": "flabebe",
+      "displayName": "Flabebe",
+      "generation": 6,
+      "types": [
+        "fairy"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "flabebe"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/669.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/669.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/669.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/669.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 670,
+      "speciesId": 670,
+      "pokemonApiId": 670,
+      "name": "floette",
+      "displayName": "Floette",
+      "generation": 6,
+      "types": [
+        "fairy"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "floette"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/670.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/670.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/670.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/670.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 10061,
+      "speciesId": 670,
+      "pokemonApiId": 10061,
+      "name": "floette-eternal",
+      "displayName": "Floette (Eternal)",
+      "generation": 6,
+      "types": [
+        "fairy"
+      ],
+      "isDefault": false,
+      "formName": "Eternal",
+      "aliases": [
+        "floette-eternal",
+        "floette",
+        "floette (eternal)",
+        "eternal",
+        "floette eternal"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10061.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10061.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10061.png",
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 10296,
+      "speciesId": 670,
+      "pokemonApiId": 10296,
+      "name": "floette-mega",
+      "displayName": "Floette (Mega)",
+      "generation": 6,
+      "types": [
+        "fairy"
+      ],
+      "isDefault": false,
+      "formName": "Mega",
+      "aliases": [
+        "floette-mega",
+        "floette",
+        "floette (mega)",
+        "mega",
+        "floette mega"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10296.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10296.png",
+        "sprite": null,
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 671,
+      "speciesId": 671,
+      "pokemonApiId": 671,
+      "name": "florges",
+      "displayName": "Florges",
+      "generation": 6,
+      "types": [
+        "fairy"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "florges"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/671.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/671.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/671.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/671.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 672,
+      "speciesId": 672,
+      "pokemonApiId": 672,
+      "name": "skiddo",
+      "displayName": "Skiddo",
+      "generation": 6,
+      "types": [
+        "grass"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "skiddo"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/672.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/672.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/672.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/672.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 673,
+      "speciesId": 673,
+      "pokemonApiId": 673,
+      "name": "gogoat",
+      "displayName": "Gogoat",
+      "generation": 6,
+      "types": [
+        "grass"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "gogoat"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/673.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/673.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/673.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/673.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 674,
+      "speciesId": 674,
+      "pokemonApiId": 674,
+      "name": "pancham",
+      "displayName": "Pancham",
+      "generation": 6,
+      "types": [
+        "fighting"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "pancham"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/674.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/674.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/674.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/674.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 675,
+      "speciesId": 675,
+      "pokemonApiId": 675,
+      "name": "pangoro",
+      "displayName": "Pangoro",
+      "generation": 6,
+      "types": [
+        "fighting",
+        "dark"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "pangoro"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/675.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/675.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/675.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/675.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 676,
+      "speciesId": 676,
+      "pokemonApiId": 676,
+      "name": "furfrou",
+      "displayName": "Furfrou",
+      "generation": 6,
+      "types": [
+        "normal"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "furfrou"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/676.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/676.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/676.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/676.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 677,
+      "speciesId": 677,
+      "pokemonApiId": 677,
+      "name": "espurr",
+      "displayName": "Espurr",
+      "generation": 6,
+      "types": [
+        "psychic"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "espurr"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/677.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/677.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/677.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/677.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 678,
+      "speciesId": 678,
+      "pokemonApiId": 678,
+      "name": "meowstic-male",
+      "displayName": "Meowstic",
+      "generation": 6,
+      "types": [
+        "psychic"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "meowstic-male",
+        "meowstic",
+        "meowstic male"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/678.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/678.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/678.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/678.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 10025,
+      "speciesId": 678,
+      "pokemonApiId": 10025,
+      "name": "meowstic-female",
+      "displayName": "Meowstic (Female)",
+      "generation": 6,
+      "types": [
+        "psychic"
+      ],
+      "isDefault": false,
+      "formName": "Female",
+      "aliases": [
+        "meowstic-female",
+        "meowstic",
+        "meowstic (female)",
+        "female",
+        "meowstic female"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10025.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10025.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10025.png",
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 10314,
+      "speciesId": 678,
+      "pokemonApiId": 10314,
+      "name": "meowstic-mega",
+      "displayName": "Meowstic (Mega)",
+      "generation": 6,
+      "types": [
+        "psychic"
+      ],
+      "isDefault": false,
+      "formName": "Mega",
+      "aliases": [
+        "meowstic-mega",
+        "meowstic",
+        "meowstic (mega)",
+        "mega",
+        "meowstic mega"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10314.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10314.png",
+        "sprite": null,
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 679,
+      "speciesId": 679,
+      "pokemonApiId": 679,
+      "name": "honedge",
+      "displayName": "Honedge",
+      "generation": 6,
+      "types": [
+        "steel",
+        "ghost"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "honedge"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/679.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/679.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/679.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/679.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 680,
+      "speciesId": 680,
+      "pokemonApiId": 680,
+      "name": "doublade",
+      "displayName": "Doublade",
+      "generation": 6,
+      "types": [
+        "steel",
+        "ghost"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "doublade"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/680.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/680.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/680.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/680.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 681,
+      "speciesId": 681,
+      "pokemonApiId": 681,
+      "name": "aegislash-shield",
+      "displayName": "Aegislash",
+      "generation": 6,
+      "types": [
+        "steel",
+        "ghost"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "aegislash-shield",
+        "aegislash",
+        "aegislash shield"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/681.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/681.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/681.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/681.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 10026,
+      "speciesId": 681,
+      "pokemonApiId": 10026,
+      "name": "aegislash-blade",
+      "displayName": "Aegislash (Blade)",
+      "generation": 6,
+      "types": [
+        "steel",
+        "ghost"
+      ],
+      "isDefault": false,
+      "formName": "Blade",
+      "aliases": [
+        "aegislash-blade",
+        "aegislash",
+        "aegislash (blade)",
+        "blade",
+        "aegislash blade"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10026.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10026.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10026.png",
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 682,
+      "speciesId": 682,
+      "pokemonApiId": 682,
+      "name": "spritzee",
+      "displayName": "Spritzee",
+      "generation": 6,
+      "types": [
+        "fairy"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "spritzee"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/682.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/682.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/682.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/682.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 683,
+      "speciesId": 683,
+      "pokemonApiId": 683,
+      "name": "aromatisse",
+      "displayName": "Aromatisse",
+      "generation": 6,
+      "types": [
+        "fairy"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "aromatisse"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/683.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/683.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/683.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/683.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 684,
+      "speciesId": 684,
+      "pokemonApiId": 684,
+      "name": "swirlix",
+      "displayName": "Swirlix",
+      "generation": 6,
+      "types": [
+        "fairy"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "swirlix"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/684.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/684.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/684.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/684.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 685,
+      "speciesId": 685,
+      "pokemonApiId": 685,
+      "name": "slurpuff",
+      "displayName": "Slurpuff",
+      "generation": 6,
+      "types": [
+        "fairy"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "slurpuff"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/685.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/685.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/685.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/685.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 686,
+      "speciesId": 686,
+      "pokemonApiId": 686,
+      "name": "inkay",
+      "displayName": "Inkay",
+      "generation": 6,
+      "types": [
+        "dark",
+        "psychic"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "inkay"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/686.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/686.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/686.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/686.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 687,
+      "speciesId": 687,
+      "pokemonApiId": 687,
+      "name": "malamar",
+      "displayName": "Malamar",
+      "generation": 6,
+      "types": [
+        "dark",
+        "psychic"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "malamar"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/687.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/687.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/687.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/687.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 10297,
+      "speciesId": 687,
+      "pokemonApiId": 10297,
+      "name": "malamar-mega",
+      "displayName": "Malamar (Mega)",
+      "generation": 6,
+      "types": [
+        "dark",
+        "psychic"
+      ],
+      "isDefault": false,
+      "formName": "Mega",
+      "aliases": [
+        "malamar-mega",
+        "malamar",
+        "malamar (mega)",
+        "mega",
+        "malamar mega"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10297.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10297.png",
+        "sprite": null,
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 688,
+      "speciesId": 688,
+      "pokemonApiId": 688,
+      "name": "binacle",
+      "displayName": "Binacle",
+      "generation": 6,
+      "types": [
+        "rock",
+        "water"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "binacle"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/688.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/688.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/688.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/688.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 689,
+      "speciesId": 689,
+      "pokemonApiId": 689,
+      "name": "barbaracle",
+      "displayName": "Barbaracle",
+      "generation": 6,
+      "types": [
+        "rock",
+        "water"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "barbaracle"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/689.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/689.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/689.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/689.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 10298,
+      "speciesId": 689,
+      "pokemonApiId": 10298,
+      "name": "barbaracle-mega",
+      "displayName": "Barbaracle (Mega)",
+      "generation": 6,
+      "types": [
+        "rock",
+        "fighting"
+      ],
+      "isDefault": false,
+      "formName": "Mega",
+      "aliases": [
+        "barbaracle-mega",
+        "barbaracle",
+        "barbaracle (mega)",
+        "mega",
+        "barbaracle mega"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10298.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10298.png",
+        "sprite": null,
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 690,
+      "speciesId": 690,
+      "pokemonApiId": 690,
+      "name": "skrelp",
+      "displayName": "Skrelp",
+      "generation": 6,
+      "types": [
+        "poison",
+        "water"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "skrelp"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/690.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/690.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/690.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/690.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 691,
+      "speciesId": 691,
+      "pokemonApiId": 691,
+      "name": "dragalge",
+      "displayName": "Dragalge",
+      "generation": 6,
+      "types": [
+        "poison",
+        "dragon"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "dragalge"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/691.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/691.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/691.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/691.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 10299,
+      "speciesId": 691,
+      "pokemonApiId": 10299,
+      "name": "dragalge-mega",
+      "displayName": "Dragalge (Mega)",
+      "generation": 6,
+      "types": [
+        "poison",
+        "dragon"
+      ],
+      "isDefault": false,
+      "formName": "Mega",
+      "aliases": [
+        "dragalge-mega",
+        "dragalge",
+        "dragalge (mega)",
+        "mega",
+        "dragalge mega"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10299.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10299.png",
+        "sprite": null,
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 692,
+      "speciesId": 692,
+      "pokemonApiId": 692,
+      "name": "clauncher",
+      "displayName": "Clauncher",
+      "generation": 6,
+      "types": [
+        "water"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "clauncher"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/692.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/692.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/692.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/692.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 693,
+      "speciesId": 693,
+      "pokemonApiId": 693,
+      "name": "clawitzer",
+      "displayName": "Clawitzer",
+      "generation": 6,
+      "types": [
+        "water"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "clawitzer"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/693.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/693.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/693.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/693.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 694,
+      "speciesId": 694,
+      "pokemonApiId": 694,
+      "name": "helioptile",
+      "displayName": "Helioptile",
+      "generation": 6,
+      "types": [
+        "electric",
+        "normal"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "helioptile"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/694.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/694.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/694.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/694.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 695,
+      "speciesId": 695,
+      "pokemonApiId": 695,
+      "name": "heliolisk",
+      "displayName": "Heliolisk",
+      "generation": 6,
+      "types": [
+        "electric",
+        "normal"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "heliolisk"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/695.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/695.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/695.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/695.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 696,
+      "speciesId": 696,
+      "pokemonApiId": 696,
+      "name": "tyrunt",
+      "displayName": "Tyrunt",
+      "generation": 6,
+      "types": [
+        "rock",
+        "dragon"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "tyrunt"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/696.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/696.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/696.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/696.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 697,
+      "speciesId": 697,
+      "pokemonApiId": 697,
+      "name": "tyrantrum",
+      "displayName": "Tyrantrum",
+      "generation": 6,
+      "types": [
+        "rock",
+        "dragon"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "tyrantrum"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/697.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/697.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/697.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/697.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 698,
+      "speciesId": 698,
+      "pokemonApiId": 698,
+      "name": "amaura",
+      "displayName": "Amaura",
+      "generation": 6,
+      "types": [
+        "rock",
+        "ice"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "amaura"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/698.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/698.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/698.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/698.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 699,
+      "speciesId": 699,
+      "pokemonApiId": 699,
+      "name": "aurorus",
+      "displayName": "Aurorus",
+      "generation": 6,
+      "types": [
+        "rock",
+        "ice"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "aurorus"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/699.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/699.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/699.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/699.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 700,
+      "speciesId": 700,
+      "pokemonApiId": 700,
+      "name": "sylveon",
+      "displayName": "Sylveon",
+      "generation": 6,
+      "types": [
+        "fairy"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "sylveon"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/700.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/700.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/700.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/700.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 701,
+      "speciesId": 701,
+      "pokemonApiId": 701,
+      "name": "hawlucha",
+      "displayName": "Hawlucha",
+      "generation": 6,
+      "types": [
+        "fighting",
+        "flying"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "hawlucha"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/701.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/701.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/701.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/701.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 10300,
+      "speciesId": 701,
+      "pokemonApiId": 10300,
+      "name": "hawlucha-mega",
+      "displayName": "Hawlucha (Mega)",
+      "generation": 6,
+      "types": [
+        "fighting",
+        "flying"
+      ],
+      "isDefault": false,
+      "formName": "Mega",
+      "aliases": [
+        "hawlucha-mega",
+        "hawlucha",
+        "hawlucha (mega)",
+        "mega",
+        "hawlucha mega"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10300.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10300.png",
+        "sprite": null,
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 702,
+      "speciesId": 702,
+      "pokemonApiId": 702,
+      "name": "dedenne",
+      "displayName": "Dedenne",
+      "generation": 6,
+      "types": [
+        "electric",
+        "fairy"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "dedenne"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/702.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/702.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/702.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/702.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 703,
+      "speciesId": 703,
+      "pokemonApiId": 703,
+      "name": "carbink",
+      "displayName": "Carbink",
+      "generation": 6,
+      "types": [
+        "rock",
+        "fairy"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "carbink"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/703.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/703.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/703.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/703.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 704,
+      "speciesId": 704,
+      "pokemonApiId": 704,
+      "name": "goomy",
+      "displayName": "Goomy",
+      "generation": 6,
+      "types": [
+        "dragon"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "goomy"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/704.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/704.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/704.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/704.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 705,
+      "speciesId": 705,
+      "pokemonApiId": 705,
+      "name": "sliggoo",
+      "displayName": "Sliggoo",
+      "generation": 6,
+      "types": [
+        "dragon"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "sliggoo"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/705.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/705.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/705.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/705.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 10241,
+      "speciesId": 705,
+      "pokemonApiId": 10241,
+      "name": "sliggoo-hisui",
+      "displayName": "Sliggoo (Hisui)",
+      "generation": 6,
+      "types": [
+        "steel",
+        "dragon"
+      ],
+      "isDefault": false,
+      "formName": "Hisui",
+      "aliases": [
+        "sliggoo-hisui",
+        "sliggoo",
+        "sliggoo (hisui)",
+        "hisui",
+        "sliggoo hisui"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10241.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10241.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10241.png",
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 706,
+      "speciesId": 706,
+      "pokemonApiId": 706,
+      "name": "goodra",
+      "displayName": "Goodra",
+      "generation": 6,
+      "types": [
+        "dragon"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "goodra"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/706.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/706.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/706.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/706.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 10242,
+      "speciesId": 706,
+      "pokemonApiId": 10242,
+      "name": "goodra-hisui",
+      "displayName": "Goodra (Hisui)",
+      "generation": 6,
+      "types": [
+        "steel",
+        "dragon"
+      ],
+      "isDefault": false,
+      "formName": "Hisui",
+      "aliases": [
+        "goodra-hisui",
+        "goodra",
+        "goodra (hisui)",
+        "hisui",
+        "goodra hisui"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10242.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10242.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10242.png",
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 707,
+      "speciesId": 707,
+      "pokemonApiId": 707,
+      "name": "klefki",
+      "displayName": "Klefki",
+      "generation": 6,
+      "types": [
+        "steel",
+        "fairy"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "klefki"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/707.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/707.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/707.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/707.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 708,
+      "speciesId": 708,
+      "pokemonApiId": 708,
+      "name": "phantump",
+      "displayName": "Phantump",
+      "generation": 6,
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "phantump"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/708.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/708.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/708.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/708.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 709,
+      "speciesId": 709,
+      "pokemonApiId": 709,
+      "name": "trevenant",
+      "displayName": "Trevenant",
+      "generation": 6,
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "trevenant"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/709.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/709.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/709.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/709.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 710,
+      "speciesId": 710,
+      "pokemonApiId": 710,
+      "name": "pumpkaboo-average",
+      "displayName": "Pumpkaboo",
+      "generation": 6,
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "pumpkaboo-average",
+        "pumpkaboo",
+        "pumpkaboo average"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/710.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/710.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/710.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/710.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 10027,
+      "speciesId": 710,
+      "pokemonApiId": 10027,
+      "name": "pumpkaboo-small",
+      "displayName": "Pumpkaboo (Small)",
+      "generation": 6,
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "isDefault": false,
+      "formName": "Small",
+      "aliases": [
+        "pumpkaboo-small",
+        "pumpkaboo",
+        "pumpkaboo (small)",
+        "small",
+        "pumpkaboo small"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10027.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10027.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10027.png",
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 10028,
+      "speciesId": 710,
+      "pokemonApiId": 10028,
+      "name": "pumpkaboo-large",
+      "displayName": "Pumpkaboo (Large)",
+      "generation": 6,
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "isDefault": false,
+      "formName": "Large",
+      "aliases": [
+        "pumpkaboo-large",
+        "pumpkaboo",
+        "pumpkaboo (large)",
+        "large",
+        "pumpkaboo large"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10028.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10028.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10028.png",
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 10029,
+      "speciesId": 710,
+      "pokemonApiId": 10029,
+      "name": "pumpkaboo-super",
+      "displayName": "Pumpkaboo (Super)",
+      "generation": 6,
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "isDefault": false,
+      "formName": "Super",
+      "aliases": [
+        "pumpkaboo-super",
+        "pumpkaboo",
+        "pumpkaboo (super)",
+        "super",
+        "pumpkaboo super"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10029.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10029.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10029.png",
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 711,
+      "speciesId": 711,
+      "pokemonApiId": 711,
+      "name": "gourgeist-average",
+      "displayName": "Gourgeist",
+      "generation": 6,
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "gourgeist-average",
+        "gourgeist",
+        "gourgeist average"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/711.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/711.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/711.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/711.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 10030,
+      "speciesId": 711,
+      "pokemonApiId": 10030,
+      "name": "gourgeist-small",
+      "displayName": "Gourgeist (Small)",
+      "generation": 6,
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "isDefault": false,
+      "formName": "Small",
+      "aliases": [
+        "gourgeist-small",
+        "gourgeist",
+        "gourgeist (small)",
+        "small",
+        "gourgeist small"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10030.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10030.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10030.png",
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 10031,
+      "speciesId": 711,
+      "pokemonApiId": 10031,
+      "name": "gourgeist-large",
+      "displayName": "Gourgeist (Large)",
+      "generation": 6,
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "isDefault": false,
+      "formName": "Large",
+      "aliases": [
+        "gourgeist-large",
+        "gourgeist",
+        "gourgeist (large)",
+        "large",
+        "gourgeist large"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10031.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10031.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10031.png",
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 10032,
+      "speciesId": 711,
+      "pokemonApiId": 10032,
+      "name": "gourgeist-super",
+      "displayName": "Gourgeist (Super)",
+      "generation": 6,
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "isDefault": false,
+      "formName": "Super",
+      "aliases": [
+        "gourgeist-super",
+        "gourgeist",
+        "gourgeist (super)",
+        "super",
+        "gourgeist super"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10032.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10032.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10032.png",
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 712,
+      "speciesId": 712,
+      "pokemonApiId": 712,
+      "name": "bergmite",
+      "displayName": "Bergmite",
+      "generation": 6,
+      "types": [
+        "ice"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "bergmite"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/712.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/712.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/712.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/712.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 713,
+      "speciesId": 713,
+      "pokemonApiId": 713,
+      "name": "avalugg",
+      "displayName": "Avalugg",
+      "generation": 6,
+      "types": [
+        "ice"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "avalugg"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/713.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/713.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/713.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/713.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 10243,
+      "speciesId": 713,
+      "pokemonApiId": 10243,
+      "name": "avalugg-hisui",
+      "displayName": "Avalugg (Hisui)",
+      "generation": 6,
+      "types": [
+        "ice",
+        "rock"
+      ],
+      "isDefault": false,
+      "formName": "Hisui",
+      "aliases": [
+        "avalugg-hisui",
+        "avalugg",
+        "avalugg (hisui)",
+        "hisui",
+        "avalugg hisui"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10243.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10243.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10243.png",
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 714,
+      "speciesId": 714,
+      "pokemonApiId": 714,
+      "name": "noibat",
+      "displayName": "Noibat",
+      "generation": 6,
+      "types": [
+        "flying",
+        "dragon"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "noibat"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/714.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/714.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/714.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/714.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 715,
+      "speciesId": 715,
+      "pokemonApiId": 715,
+      "name": "noivern",
+      "displayName": "Noivern",
+      "generation": 6,
+      "types": [
+        "flying",
+        "dragon"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "noivern"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/715.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/715.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/715.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/715.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 716,
+      "speciesId": 716,
+      "pokemonApiId": 716,
+      "name": "xerneas",
+      "displayName": "Xerneas",
+      "generation": 6,
+      "types": [
+        "fairy"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "xerneas"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/716.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/716.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/716.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/716.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 717,
+      "speciesId": 717,
+      "pokemonApiId": 717,
+      "name": "yveltal",
+      "displayName": "Yveltal",
+      "generation": 6,
+      "types": [
+        "dark",
+        "flying"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "yveltal"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/717.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/717.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/717.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/717.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 718,
+      "speciesId": 718,
+      "pokemonApiId": 718,
+      "name": "zygarde-50",
+      "displayName": "Zygarde",
+      "generation": 6,
+      "types": [
+        "dragon",
+        "ground"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "zygarde-50",
+        "zygarde",
+        "zygarde 50"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/718.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/718.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/718.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/718.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 10118,
+      "speciesId": 718,
+      "pokemonApiId": 10118,
+      "name": "zygarde-10-power-construct",
+      "displayName": "Zygarde (10 Power Construct)",
+      "generation": 6,
+      "types": [
+        "dragon",
+        "ground"
+      ],
+      "isDefault": false,
+      "formName": "10 Power Construct",
+      "aliases": [
+        "zygarde-10-power-construct",
+        "zygarde",
+        "zygarde (10 power construct)",
+        "10 power construct",
+        "zygarde 10 power construct"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10118.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10118.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10118.png",
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 10119,
+      "speciesId": 718,
+      "pokemonApiId": 10119,
+      "name": "zygarde-50-power-construct",
+      "displayName": "Zygarde (50 Power Construct)",
+      "generation": 6,
+      "types": [
+        "dragon",
+        "ground"
+      ],
+      "isDefault": false,
+      "formName": "50 Power Construct",
+      "aliases": [
+        "zygarde-50-power-construct",
+        "zygarde",
+        "zygarde (50 power construct)",
+        "50 power construct",
+        "zygarde 50 power construct"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10119.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10119.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10119.png",
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 10120,
+      "speciesId": 718,
+      "pokemonApiId": 10120,
+      "name": "zygarde-complete",
+      "displayName": "Zygarde (Complete)",
+      "generation": 6,
+      "types": [
+        "dragon",
+        "ground"
+      ],
+      "isDefault": false,
+      "formName": "Complete",
+      "aliases": [
+        "zygarde-complete",
+        "zygarde",
+        "zygarde (complete)",
+        "complete",
+        "zygarde complete"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10120.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10120.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10120.png",
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 10181,
+      "speciesId": 718,
+      "pokemonApiId": 10181,
+      "name": "zygarde-10",
+      "displayName": "Zygarde (10)",
+      "generation": 6,
+      "types": [
+        "dragon",
+        "ground"
+      ],
+      "isDefault": false,
+      "formName": "10",
+      "aliases": [
+        "zygarde-10",
+        "zygarde",
+        "zygarde (10)",
+        "10",
+        "zygarde 10"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10181.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10181.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10181.png",
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 10301,
+      "speciesId": 718,
+      "pokemonApiId": 10301,
+      "name": "zygarde-mega",
+      "displayName": "Zygarde (Mega)",
+      "generation": 6,
+      "types": [
+        "dragon",
+        "ground"
+      ],
+      "isDefault": false,
+      "formName": "Mega",
+      "aliases": [
+        "zygarde-mega",
+        "zygarde",
+        "zygarde (mega)",
+        "mega",
+        "zygarde mega"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10301.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10301.png",
+        "sprite": null,
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 719,
+      "speciesId": 719,
+      "pokemonApiId": 719,
+      "name": "diancie",
+      "displayName": "Diancie",
+      "generation": 6,
+      "types": [
+        "rock",
+        "fairy"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "diancie"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/719.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/719.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/719.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/719.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 10075,
+      "speciesId": 719,
+      "pokemonApiId": 10075,
+      "name": "diancie-mega",
+      "displayName": "Diancie (Mega)",
+      "generation": 6,
+      "types": [
+        "rock",
+        "fairy"
+      ],
+      "isDefault": false,
+      "formName": "Mega",
+      "aliases": [
+        "diancie-mega",
+        "diancie",
+        "diancie (mega)",
+        "mega",
+        "diancie mega"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10075.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10075.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10075.png",
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 720,
+      "speciesId": 720,
+      "pokemonApiId": 720,
+      "name": "hoopa",
+      "displayName": "Hoopa",
+      "generation": 6,
+      "types": [
+        "psychic",
+        "ghost"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "hoopa"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/720.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/720.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/720.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/720.png"
+      },
+      "guessable": true
+    },
+    {
+      "id": 10086,
+      "speciesId": 720,
+      "pokemonApiId": 10086,
+      "name": "hoopa-unbound",
+      "displayName": "Hoopa (Unbound)",
+      "generation": 6,
+      "types": [
+        "psychic",
+        "dark"
+      ],
+      "isDefault": false,
+      "formName": "Unbound",
+      "aliases": [
+        "hoopa-unbound",
+        "hoopa",
+        "hoopa (unbound)",
+        "unbound",
+        "hoopa unbound"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10086.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/10086.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10086.png",
+        "fallback": null
+      },
+      "guessable": true
+    },
+    {
+      "id": 721,
+      "speciesId": 721,
+      "pokemonApiId": 721,
+      "name": "volcanion",
+      "displayName": "Volcanion",
+      "generation": 6,
+      "types": [
+        "fire",
+        "water"
+      ],
+      "isDefault": true,
+      "formName": null,
+      "aliases": [
+        "volcanion"
+      ],
+      "artwork": {
+        "official": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/721.png",
+        "home": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/721.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/721.png",
+        "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/721.png"
+      },
+      "guessable": true
+    }
+  ]
+}
