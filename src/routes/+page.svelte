@@ -84,7 +84,7 @@
         </div>
 
         <div
-          class:revealed={game.isRevealed}
+          class:revealed={game.isRevealed && !game.mode.silhouette.alwaysHidden}
           class:ready={game.imageReady}
           class="scanner-screen"
         >
@@ -106,7 +106,7 @@
           {:else if game.answer}
             <img
               src={getBestArtwork(game.answer)}
-              alt={game.isRevealed ? game.answer.displayName : 'Mystery Pokemon silhouette'}
+              alt={game.isRevealed && !game.mode.silhouette.alwaysHidden ? game.answer.displayName : 'Mystery Pokemon silhouette'}
               onload={() => game.onImageLoaded()}
               onerror={(e) => {
                 if (!game.answer) return;
@@ -194,12 +194,12 @@
           <dl>
             <div>
               <dt>Region</dt>
-              <dd>{game.isRevealed ? generationLabel : 'Hidden'}</dd>
+              <dd>{game.isRevealed || game.mode.hints.showRegion ? generationLabel : 'Hidden'}</dd>
             </div>
             <div>
               <dt>Type</dt>
               <dd>
-                {#if game.isRevealed && game.answer}
+                {#if (game.isRevealed || game.mode.hints.showType) && game.answer}
                   {#each game.answer.types as type}
                     <span class={`type ${type}`}>{type}</span>
                   {/each}
