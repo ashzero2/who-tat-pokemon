@@ -1,6 +1,8 @@
 import type { GenerationId, PokemonEntry } from '$lib/data/types';
 import { loadGenerations } from '$lib/data/pokemon-loader';
 import { preloadEntry, preloadQueue, peekQueue } from '$lib/assets/preload';
+import { getModeDefinition } from '$lib/modes';
+import type { ModeId } from '$lib/modes';
 import { AUTO_ADVANCE_SECONDS, createRound, defaultSettings, scoreForAnswer } from './engine';
 import type { GameRound, RoundOutcome } from './engine';
 
@@ -12,6 +14,21 @@ export class GameController {
 	roster = $state<PokemonEntry[]>([]);
 	loading = $state(false);
 	loadError = $state<string | null>(null);
+
+	// ── Mode ─────────────────────────────────────────────────────────────────
+	activeMode = $state<ModeId>('classic');
+
+	get mode() {
+		return getModeDefinition(this.activeMode);
+	}
+
+	selectMode(id: ModeId) {
+		const def = getModeDefinition(id);
+		if (def.status !== 'available') return; // locked / preview modes cannot start
+		this.activeMode = id;
+		this.roundLimit = def.rounds;
+		this.newGame();
+	}
 
 	// ── Settings ──────────────────────────────────────────────────────────────
 	selectedGenerations = $state<GenerationId[]>([...defaultSettings.generations]);

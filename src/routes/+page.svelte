@@ -4,6 +4,7 @@
   import type { GenerationId } from '$lib/data/types';
   import { getBestArtwork } from '$lib/data/pokemon-loader';
   import { GameController, AUTO_ADVANCE_SECONDS, defaultSettings } from '$lib/game';
+  import { MODE_DEFINITIONS } from '$lib/modes';
 
   const GENERATION_FILTERS: GenerationId[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   const UNLOCKED_GENERATIONS: GenerationId[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -132,6 +133,30 @@
       </section>
 
       <section class="right-deck" aria-label="Game controls">
+        <!-- Mode selector -->
+        <div class="mode-selector" aria-label="Game mode">
+          {#each MODE_DEFINITIONS as modeDef}
+            {@const isActive = game.activeMode === modeDef.id}
+            {@const isLocked = modeDef.status === 'locked'}
+            {@const isPreview = modeDef.status === 'preview'}
+            <button
+              class="mode-btn"
+              class:active={isActive}
+              class:locked={isLocked}
+              class:preview={isPreview}
+              type="button"
+              disabled={isLocked}
+              aria-label={`${modeDef.label}${isLocked ? ' — coming soon' : isPreview ? ' — preview' : ''}`}
+              title={isLocked ? 'Coming soon' : isPreview ? `${modeDef.label} (preview)` : modeDef.description}
+              onclick={() => game.selectMode(modeDef.id)}
+            >
+              {modeDef.label}
+              {#if isLocked}<span class="badge">Soon</span>
+              {:else if isPreview}<span class="badge">Preview</span>{/if}
+            </button>
+          {/each}
+        </div>
+
         <div class="mode-strip" aria-label="Generation filter">
           {#each GENERATION_FILTERS as id}
             {@const locked = !UNLOCKED_GENERATIONS.includes(id)}

@@ -305,6 +305,65 @@ h2 {
   transition: width 280ms ease;
 }
 
+.mode-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 12px;
+}
+
+.mode-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.72);
+  background: rgba(28, 5, 11, 0.42);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 950;
+  letter-spacing: 0.04em;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
+}
+
+.mode-btn.active {
+  color: #311014;
+  background: #fff2c8;
+  border-color: transparent;
+}
+
+.mode-btn.locked {
+  cursor: not-allowed;
+  opacity: 0.42;
+}
+
+.mode-btn.preview {
+  border-style: dashed;
+}
+
+.mode-btn .badge {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mode-btn.active .badge {
+  background: rgba(49, 16, 20, 0.14);
+  color: rgba(49, 16, 20, 0.58);
+}
+
 .mode-strip {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
