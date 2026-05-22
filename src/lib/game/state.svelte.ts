@@ -184,7 +184,7 @@ export class GameController {
 		this.selectedId = choice.id;
 		const correct = choice.id === this.answer.id;
 		this.outcome = correct ? 'correct' : 'miss';
-		this.score += scoreForAnswer(correct, this.streak);
+		this.score += scoreForAnswer(correct, this.streak, this.mode.scoringMultiplier);
 		this.streak = correct ? this.streak + 1 : 0;
 		this.bestStreak = Math.max(this.bestStreak, this.streak);
 		if (correct) {

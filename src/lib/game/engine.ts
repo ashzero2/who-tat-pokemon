@@ -39,7 +39,7 @@ export function createRound(roster: PokemonEntry[], usedIds: Set<number>): GameR
 	return { answer, choices: shuffle([answer, ...decoys]) };
 }
 
-export function scoreForAnswer(isCorrect: boolean, streak: number): number {
+export function scoreForAnswer(isCorrect: boolean, streak: number, multiplier = 1): number {
 	if (!isCorrect) return 0;
-	return 100 + streak * 25;
+	return Math.round((100 + streak * 25) * multiplier);
 }
