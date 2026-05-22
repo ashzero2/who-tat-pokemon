@@ -24,6 +24,8 @@
       return `Registered. Next scan in ${game.countdown}s.`;
     if (game.outcome === 'correct') return 'Registered. Clean read on the silhouette.';
     if (game.outcome === 'miss') return `Signal resolved: ${game.answer.displayName}.`;
+    if (game.mode.timer.kind === 'countdown' && game.countdown !== null)
+      return `⏱ ${game.countdown}s — Identify quickly!`;
     return 'Scanner locked. Identify the silhouette.';
   }
 
@@ -251,15 +253,28 @@
           <div class="dpad" aria-hidden="true">
             <span></span>
           </div>
-          {#if game.outcome === 'correct' && game.countdown !== null}
+          {#if game.countdown !== null}
+            {@const timerMax = game.mode.timer.kind === 'countdown'
+              ? game.mode.timer.seconds
+              : game.mode.timer.kind === 'auto-advance'
+                ? game.mode.timer.seconds
+                : AUTO_ADVANCE_SECONDS}
             <div
               class="auto-timer"
-              style={`--timer-progress: ${(game.countdown / AUTO_ADVANCE_SECONDS) * 100}%`}
+              class:countdown-active={game.mode.timer.kind === 'countdown' && game.outcome === 'idle'}
+              class:countdown-danger={game.mode.timer.kind === 'countdown' && game.countdown <= 5}
+              style={`--timer-progress: ${(game.countdown / timerMax) * 100}%`}
               aria-live="polite"
             >
               <span></span>
               <strong>{game.countdown}s</strong>
-              <p>Next scan queued</p>
+              <p>
+                {#if game.mode.timer.kind === 'countdown' && game.outcome === 'idle'}
+                  Time remaining
+                {:else}
+                  Next scan queued
+                {/if}
+              </p>
             </div>
           {/if}
           <button

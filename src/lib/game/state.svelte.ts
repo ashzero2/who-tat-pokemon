@@ -96,18 +96,55 @@ export class GameController {
 		this.countdown = null;
 	}
 
-	private scheduleAutoAdvance() {
+	/** Start the appropriate post-answer timer based on the active mode. */
+	private schedulePostAnswerTimer() {
+		const timer = this.mode.timer;
+		if (timer.kind === 'none') return; // Hard Mode: no auto-advance
+		if (timer.kind === 'auto-advance') {
+			this.clearTimer();
+			this.countdown = timer.seconds;
+			this._timer = setInterval(() => {
+				if (this.countdown === null) return;
+				if (this.countdown <= 1) {
+					this.clearTimer();
+					this.nextRound();
+					return;
+				}
+				this.countdown -= 1;
+			}, 1000);
+		}
+		// countdown timer is handled by startCountdownTimer()
+	}
+
+	// ── Countdown timer (Timed mode) ─────────────────────────────────────────
+
+	/** Per-round countdown that auto-misses when time expires. */
+	private startCountdownTimer() {
+		const timer = this.mode.timer;
+		if (timer.kind !== 'countdown') return;
 		this.clearTimer();
-		this.countdown = AUTO_ADVANCE_SECONDS;
+		this.countdown = timer.seconds;
 		this._timer = setInterval(() => {
 			if (this.countdown === null) return;
 			if (this.countdown <= 1) {
 				this.clearTimer();
-				this.nextRound();
+				// Time ran out — treat as a miss
+				if (this.outcome === 'idle' && this.answer) {
+					this.outcome = 'miss';
+					this.streak = 0;
+					this.totalMissed += 1;
+				}
 				return;
 			}
 			this.countdown -= 1;
 		}, 1000);
+	}
+
+	/** Penalise wrong answer in countdown mode by deducting seconds. */
+	private penaliseCountdown(seconds: number) {
+		if (this.countdown !== null) {
+			this.countdown = Math.max(0, this.countdown - seconds);
+		}
 	}
 
 	// ── Preload queue ─────────────────────────────────────────────────────────
@@ -146,6 +183,8 @@ export class GameController {
 		// Preload current round image immediately
 		preloadEntry(this.currentRound.answer);
 		this.resetImage();
+		// Start per-round countdown if in Timed mode
+		this.startCountdownTimer();
 	}
 
 	newGame(recordPrevious = false) {
@@ -177,6 +216,8 @@ export class GameController {
 		// Preload current round image immediately
 		preloadEntry(this.currentRound.answer);
 		this.resetImage();
+		// Start per-round countdown if in Timed mode
+		this.startCountdownTimer();
 	}
 
 	answerChoice(choice: PokemonEntry) {
@@ -189,9 +230,13 @@ export class GameController {
 		this.bestStreak = Math.max(this.bestStreak, this.streak);
 		if (correct) {
 			this.totalCorrect += 1;
-			this.scheduleAutoAdvance();
+			this.schedulePostAnswerTimer();
 		} else {
 			this.totalMissed += 1;
+			// In countdown mode, wrong answer costs 3 seconds
+			if (this.mode.timer.kind === 'countdown') {
+				this.penaliseCountdown(3);
+			}
 		}
 	}
 
