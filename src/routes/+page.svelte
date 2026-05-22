@@ -6,6 +6,8 @@
   import type { GameRound } from '$lib/game';
 
   const generationFilters: GenerationId[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const unlockedGenerations: GenerationId[] = [1, 2];
+  const autoAdvanceSeconds = 5;
 
   let selectedGenerations = $state<GenerationId[]>(defaultSettings.generations);
   let roundLimit = $state(defaultSettings.rounds);
@@ -17,6 +19,8 @@
   let selectedId = $state<number | null>(null);
   let usedIds = $state(new Set<number>());
   let imageReady = $state(false);
+  let countdown = $state<number | null>(null);
+  let autoAdvanceTimer: ReturnType<typeof setInterval> | null = null;
 
   let playableRoster = $derived(
     pokemonRoster.filter((entry) => selectedGenerations.includes(entry.generation))
@@ -30,6 +34,32 @@
   );
   let progress = $derived((roundNumber / roundLimit) * 100);
 
+  function clearAutoAdvance() {
+    if (autoAdvanceTimer) {
+      clearInterval(autoAdvanceTimer);
+      autoAdvanceTimer = null;
+    }
+
+    countdown = null;
+  }
+
+  function scheduleAutoAdvance() {
+    clearAutoAdvance();
+    countdown = autoAdvanceSeconds;
+
+    autoAdvanceTimer = setInterval(() => {
+      if (countdown === null) return;
+
+      if (countdown <= 1) {
+        clearAutoAdvance();
+        nextRound();
+        return;
+      }
+
+      countdown -= 1;
+    }, 1000);
+  }
+
   function resetImage() {
     imageReady = false;
     requestAnimationFrame(() => {
@@ -38,6 +68,7 @@
   }
 
   function startRound() {
+    clearAutoAdvance();
     outcome = 'idle';
     selectedId = null;
     currentRound = createRound(playableRoster, usedIds);
@@ -46,6 +77,7 @@
   }
 
   function newGame() {
+    clearAutoAdvance();
     roundNumber = 1;
     score = 0;
     streak = 0;
@@ -67,10 +99,14 @@
     score += scoreForAnswer(correct, streak);
     streak = correct ? streak + 1 : 0;
     bestStreak = Math.max(bestStreak, streak);
+
+    if (correct) scheduleAutoAdvance();
   }
 
   function nextRound() {
     if (outcome === 'idle') return;
+
+    clearAutoAdvance();
 
     if (roundNumber >= roundLimit) {
       newGame();
@@ -82,13 +118,13 @@
   }
 
   function toggleGeneration(id: GenerationId) {
-    if (id !== 1) return;
+    if (!unlockedGenerations.includes(id)) return;
 
     const nextSelection = selectedGenerations.includes(id)
       ? selectedGenerations.filter((generation) => generation !== id)
       : [...selectedGenerations, id];
 
-    selectedGenerations = nextSelection.length ? nextSelection : [1];
+    selectedGenerations = nextSelection.length ? nextSelection : defaultSettings.generations;
     newGame();
   }
 
@@ -100,6 +136,7 @@
   }
 
   function statusText() {
+    if (outcome === 'correct' && countdown !== null) return `Registered. Next scan in ${countdown}s.`;
     if (outcome === 'correct') return 'Registered. Clean read on the silhouette.';
     if (outcome === 'miss') return `Signal resolved: ${formatPokemonName(answer.name)}.`;
     return 'Scanner locked. Identify the silhouette.';
@@ -177,11 +214,13 @@
           {#each generationFilters as id}
             <button
               class:active={selectedGenerations.includes(id)}
-              class:locked={id !== 1}
+              class:locked={!unlockedGenerations.includes(id)}
               type="button"
-              aria-label={`Generation ${id}${id !== 1 ? ' locked for future expansion' : ''}`}
+              aria-label={`Generation ${id}${
+                !unlockedGenerations.includes(id) ? ' locked for future expansion' : ''
+              }`}
               onclick={() => toggleGeneration(id)}
-              title={id === 1 ? 'Kanto roster' : 'Coming soon'}
+              title={unlockedGenerations.includes(id) ? `Generation ${id} roster` : 'Coming soon'}
             >
               {id}
             </button>
@@ -233,6 +272,17 @@
           <div class="dpad" aria-hidden="true">
             <span></span>
           </div>
+          {#if outcome === 'correct' && countdown !== null}
+            <div
+              class="auto-timer"
+              style={`--timer-progress: ${(countdown / autoAdvanceSeconds) * 100}%`}
+              aria-live="polite"
+            >
+              <span></span>
+              <strong>{countdown}s</strong>
+              <p>Next scan queued</p>
+            </div>
+          {/if}
           <button class="next-button" type="button" disabled={outcome === 'idle'} onclick={nextRound}>
             {roundNumber >= roundLimit && outcome !== 'idle' ? 'New run' : 'Next scan'}
           </button>

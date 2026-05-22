@@ -13,7 +13,7 @@ export type GameRound = {
 };
 
 export const defaultSettings: GameSettings = {
-  generations: [1],
+  generations: [1, 2],
   rounds: 10
 };
 
